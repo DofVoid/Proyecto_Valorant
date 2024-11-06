@@ -1,0 +1,494 @@
+/* ! ----------FUENTES---------- */
+
+/* * -Fuente general- */
+@font-face {
+    font-family: 'fuente1';
+    src: url('./fuentes/FontFont_FF.Mark.Pro.Hairline.otf') format('opentype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'fuente1';
+    src: url('./fuentes/FontFont_FF.Mark.Pro.Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+/* * -Fuente VALORANT- */
+@font-face {
+    font-family: 'fuente2';
+    src: url('./fuentes/Valorant\ Font.ttf') format('opentype');
+}
+
+/* * -Fuente título secciones- */
+@font-face {
+    font-family: 'fuente3';
+    src: url(./fuentes/tungsten-bold.ttf) format('opentype');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ! ----------INDEX---------- */
+
+
+/* * -General- */
+* {
+    font-family: 'fuente1', Arial, sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* * -Barra negra- */
+nav {
+    background-color: #111;
+    border-bottom: 2px solid rgba(51, 51, 51, .25);
+    display: flex;
+    justify-content: space-between;
+    min-height: 90px;
+}   
+
+
+/* * -Distribución elementos barra negra- */
+/* TODO: Hacer que salga un desplegable para elegir opciones del nav cuando se hace la pestaña más pequeña */
+.elementos-nav {
+    display: flex;
+    margin-left: 30px;
+}
+
+
+/* * -Elementos barra negra- */
+.elemento-nav {
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    letter-spacing: .08em;
+    padding: 25px 25px 10px;
+    margin: 0 10px;
+}
+
+
+/* * -Letra elementos barra negra- */
+.elemento-nav a {
+    color: #ECE8E1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    align-self: center;
+    margin: auto 0;
+    margin-bottom: 15px;  
+}
+
+
+/* * -Barra roja decorativa (ratón) elementos barra negra- */
+.barra-nav {
+    border: 2px solid #FF4655;
+    border-radius: 2px;
+    transition: opacity .3s;
+    opacity: 0;
+}
+.link-nav:hover + .barra-nav {
+    opacity: 1;
+    
+}
+
+
+/* * -Cambio a rojo (ratón) elementos barra negra- */
+.elemento-nav a:hover {
+    color: #FF4655;
+}
+
+
+/* * -Icono blanco y rojo (ratón) barra negra- */
+.nav-icon-w {
+    background-image: url("./media/img/valorant-icon-w.png");
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    height: 35px;
+    width: 35px;
+}
+.nav-icon-w:hover {
+    background-image: url("./media/img/valorant-icon-r.png");
+}
+
+
+/* * -Distribución botón barra negra- */
+.boton-reg {
+    display:flex;
+    align-self: center;
+    height: 50px;
+    margin-right: 40px;
+}
+
+
+/* * -Diseño botón barra negra- */
+.boton-reg a {
+    background: linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
+    border-radius: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: .08em;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+
+/* * -Letra botón barra negra- */
+.boton-reg a span {
+    font-family: 'fuente1', Arial, sans-serif;
+    font-weight: 700;
+    color: #111;
+}
+
+
+@media screen and (max-width: 900px) {
+    .elemento-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #292929;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .elemento-nav .active {
+        display: flex;
+    }
+
+    .nav-icon-w {
+        display: block;
+    }
+
+    .elemento-nav li {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+
+/* * -Distribución video main- */
+.video-main {
+    overflow: hidden;
+    height: 55vw;
+}
+
+
+/* * -Ajuste tamaño video main- */
+figure > video {
+    width: 100%;
+}
+
+
+/* 
+.titulo-main {
+    border: 10px solid blue;
+    display: flex;
+} */
+
+
+/* * -Letra título1 video main- */
+/* TODO: Hacer que al hacer la pestaña pequeña no se vaya hacia abajo */
+.texto-video1 {
+    font-family: 'fuente2', Arial, sans-serif;
+    font-size: 5vw;
+}
+
+
+/* * -Distribución y diseño título1 video main- */
+/* TODO: Hacer que al hacer la pestaña pequeña no se vaya hacia abajo */
+.titulo-main > h1 {
+    color: #FF4655;
+    position: absolute;
+    top: 30vw;
+    right: 12vw;
+}
+
+
+/* * -Distribución y diseño título2 video main- */
+.titulo-main > h2 {
+    color: #ECE8E1;
+    position: absolute;
+    top: 36vw;
+    right: 12.5vw;
+    
+}
+
+
+/* * -Letra título2 video main- */
+.texto-video2 {
+    font-family:   'fuente1', Arial, sans-serif;
+    font-size: 1vw;
+}
+
+
+/* * -¿?- */
+/* TODO: Ver que hace esto o quitarlo */
+.main-agentes {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* * -Todas secciones main- */
+/* TODO: Arreglarlo, nose, queda feo */
+.main-seccion {
+    display: flex;
+    height: 400px;
+    padding: 50px 80px;
+}
+
+
+/* * -Letra título todas secciones main- */
+.main-seccion > span {
+    font-family: 'fuente3', Arial, sans-serif;
+    font-size: 600%;
+}
+
+
+/* * -Secciones blancas main- */
+.rangos-main, .mapas-main {
+    background-image: url(./media/img/fondo-blanco.png);
+    justify-content: space-between;
+}
+
+
+/* * -Secciones rojas main- */
+.agentes-main, .lineups-main {
+    background-image: url(./media/img/fondo-rojo.png);
+    justify-content: flex-end;
+}
+
+
+/* * -Distribución, tamaño foto mapa main- */
+.foto-mapa-main {
+    margin-right: 10vw;
+    overflow: hidden;
+}
+.foto-mapa-main > img {
+    width: 30vw;
+    min-width: 500px;
+}
+
+
+/* * -Comentario foto mapa main- */
+.foto-mapa-main > figcaption {
+    color: #b3b0ac;
+}
+
+
+.footer {
+    border: 2px solid blue;
+    text-align: center;
+    background-color: #292929;
+    font-size: 14px;
+    padding: 6px;
+}
+
+.footer > a {
+    border: 2px solid green;
+    text-decoration: none;
+    color: #ECE8E1;
+}
+
+.footer2 {
+    border: 2px solid green;
+    text-align: center;
+    background-color: #111;
+    color: #ECE8E1;
+    font-family: 'fuente2';
+    font-size: 14px;
+    padding: 12px;
+}
+
+.footer3 {
+    border: 2px solid green;
+    text-align: center;
+    background-color: #111;
+    color: #ECE8E1;
+    font-size: 14px;
+}
+
+.pegi1 {
+    width: 58px;
+}
+
+.pegi2 {
+    width: 69px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ! ----------LOGIN---------- */
+
+
+/* * -Diseño botón volver login- */
+.volver-main {
+    font-family: 'fuente1', Arial, sans-serif;
+    font-size: 1rem;
+    color: #ECE8E1;
+    text-decoration: none;
+}
+
+
+/* * -Distribución botón volver login- */
+/* TODO: Hacer que no este fijo y quede mejor con el formulario al hacer la ventana más pequeña */
+.volver-main2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+/* * -Linea decorativa botón volver login- */
+.volver-main:hover {
+    text-decoration-line: underline;
+}
+
+
+/* * -Flecha botón volver login- */
+.flecha-login {
+    color: #ECE8E1;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* * -Imagen y distribución fondo login- */
+.cuerpo {
+    background-image: url(./media/img/Valorant_EP-8-Teaser_The-arrival.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+
+/* * -¿? (supongo que por el *{} del principio)- */
+/* TODO: Ver que hace esto o quitarlo */
+.texto-login {
+    font-family: 'fuente1', Arial, sans-serif;
+}
+
+
+/* * -Distribución formulario login- */
+.mid-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+
+/* * -Diseño fondo formulario login- */
+.form-login {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20vw;
+    min-height: 375px;
+    width: 20vw;
+    min-width: 375px;
+    padding: 30px;
+  }
+
+
+  /* * -Distribución inputs (escribir) login- */
+  /* TODO: Arreglar que no se haga más pequeño cuando cambias el tamaño de la pestaña */
+  .form-login div input {
+    height: 2vw;
+    width: 100%;
+  }
+
+
+/* * -Input usuario login- */
+.usuario-login {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 35px;
+
+}
+
+
+/* * -Input contraseña login- */
+.contra-login {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+/* * -Input checkbox login- */
+.check-login {
+    font-size: 10px;
+    display: flex;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+/* * -Distribución input checkbox login- */
+#verificar{
+    height: 16px;
+    width: 16px;
+}
+.check-login > label {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+
+/* * -Distribución y diseño input botón login- */
+.boton-login {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 63px;
+}
